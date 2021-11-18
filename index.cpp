@@ -1,3 +1,7 @@
+//TODO:
+// 1)Доделать удаление по заданному числу
+// 2)Оформить отчет
+
 #include <iostream>
 #include <vector>
 #include "functionsForList.h"
