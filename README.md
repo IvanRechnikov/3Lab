@@ -4,10 +4,10 @@
 <ul>
   <li>Зайдите в локальную папку с решениями</li>
   <li>Откройте консоль в данной папке</li>
-  <li>Выполните команду: 
-    ```shell
-$ git clone https://github.com/IvanRechnikov/3Lab.git
-```</li>
+  <li>Выполните команду:</li>
+   ```shell
+ git clone https://github.com/IvanRechnikov/3Lab.git
+```
 </ul>
 <h3>Описание лабораторной работы</h3>
 <h4>Двусвязный список (его функции):</h4>
