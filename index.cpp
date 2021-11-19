@@ -17,8 +17,6 @@ void main()
 
 	List<int> list;
 
-
-
 	int S; // Число для добавления
 	int number; // Номер выбора
 	int counter; // кол-во элементов в массиве
@@ -34,7 +32,13 @@ void main()
 		list.AddHead(mas[i]);
 	}
 
-	while (1)
+	list.Revers();
+
+	list.Show();
+
+	list.Delete(3);
+	list.Show();
+	/*while (1)
 	{
 		system("cls");
 		cout << "\n\t\t\t 1. Добавление записи в начало списка";
@@ -43,18 +47,19 @@ void main()
 		cout << "\n\t\t\t 4. Вывод";
 		cout << "\n\t\t\t 5. Очистка списка";
 		cout << "\n\t\t\t 6. Поиск по значению";
-		cout << "\n\t\t\t 7. Выход";
+		cout << "\n\t\t\t 7. Удаление заданого числа (всех повторяющихся тоже)";
+		cout << "\n\t\t\t 8. Выход";
 		cout << "\n\n\n\tВведите номер пункта: ";
 		cin >> number;
 		switch (number)
 		{
-		case 1: cout << "Введите элемент:";
+		case 1: cout << "Введите элемент: ";
 			cin >> S;
 			list.AddHead(S);
 			cout << "\n\n\t\tУспешно добавлено!\n";
 			system("pause");
 			break;
-		case 2: cout << "Введите элемент:";
+		case 2: cout << "Введите элемент: ";
 			cin >> S;
 			list.Add(S);
 			cout << "\n\n\t\tУспешно добавлено!\n";
@@ -73,14 +78,20 @@ void main()
 			cout << "\n\n\t\tСписок очищен\n";
 			system("pause");
 			break;
-		case 6: cout << "\n\n\t\tВведите элемент для поиска";
+		case 6: cout << "\n\n\t\tВведите элемент для поиска: ";
 			cin >> S;
-			list.Search(S);
+			if (list.Search(S))
+				cout << "\n\n\t\tЭлемент найден!" << endl;
+			else list.Search(S);
 			system("pause");
 			break;
-		case 7: exit(1);
+		case 7: cout << "\n\n\t\tВведите элемент для удаления: ";
+			cin >> S;
+			system("pause");
+			break;			
+		case 8: exit(1);
 		default: break;
 		}
 	}
-	system("pause");
+	system("pause");*/
 }

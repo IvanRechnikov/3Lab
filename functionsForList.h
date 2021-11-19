@@ -266,37 +266,52 @@ void List<type>::Clear()
 }
 
 template<typename type>
-void List<type>::Search(type data)
+void List<type>::Revers() {
+	Node<type>* first = head; // Создаём временные указатели на первый и последний элементы списка
+	Node<type>* lust = tail; // Присваиваем им адреса начала и конца списка соответственно
+	Node<type>* temp = new Node<type>(); // Создаём новый элемент списка как временную переменную
+	for (int i = 0; i < (size / 2); ++i) { // Суть оего метода разворота списка - Значение под ссылкой первого элемента - положить во временную переменную
+		temp->data = first->data;        // На место первого положить значение из элемента под ссылкой на последний элемент а в него положить данные первого из временной переменной
+		first->data = lust->data;        // После этого сместить ссылки на первый и последний элемент к центру списка через указатели на следующий элемент и предыдущий соответственно
+		lust->data = temp->data;         // Повторять - колличество раз, равное целочисленной половине размера списка, так как идём с двух сторон
+		first = first->next;            // Если количество элементов будет чётное, то колличество итераций будет достаточно чтобы поменять местами все элементы
+		lust = lust->prev;              // Если колличество буден не чётное, то центральный элемент останется нетронутым, так как он и должен остаться на том же месте
+	}
+	delete temp; // Удаляем временную переменную для освобождения памяти
+
+}
+
+template<typename type>
+bool List<type>::Search(type data)
 {
 	int count = 0;
 	Node<type>* p = head;
 	while (p)
 	{
 		if (p->data == data)
-			count++;
+			return true;
 		p = p->next;
 	}
-	if (count == 0)
-		cout << "Таких элементов в списке нет" << endl;
-	else cout << "Найдено " << count << " элементов\n" << endl;
+	return false;
 }
 
-//template<typename type>
-//void List<type>::DeleteAllSelected(type data)
-//{
-//	Node<type>* p = head;
-//	while (p)
-//	{
-//		if (p->data == data)
-//		{
-//			p = p->next;
-//			if (!p->prev)
-//				continue;
-//			delete(p->prev);
-//		}
-//		else
-//		{
-//			p = p->next;
-//		}		
-//	}
-//}
+template<typename type>
+void List<type>::DeleteAllSelected(type data)
+{
+	
+	Node<type>* p = head;
+	List<type> list;
+	int index = 0;
+	while (p)
+	{
+		if (p->data == data)
+		{
+			list.Delete(index);
+			p = p->next;
+		}
+		else
+			p = p->next;
+		index++;
+	}
+	cout << "Элементы со значением " << data << " были удалены!" << endl;
+}
