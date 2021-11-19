@@ -296,22 +296,13 @@ bool List<type>::Search(type data)
 }
 
 template<typename type>
-void List<type>::DeleteAllSelected(type data)
+void List<type>::DeleteAllSelected(type data, List<type>& list)
 {
-	
-	Node<type>* p = head;
-	List<type> list;
-	int index = 0;
-	while (p)
+	int index = list.size;
+	for (int i = 0; i <= index; i++)
 	{
-		if (p->data == data)
-		{
-			list.Delete(index);
-			p = p->next;
-		}
-		else
-			p = p->next;
-		index++;
+		if (list[i] == data)
+			list.Delete(i);
 	}
 	cout << "Элементы со значением " << data << " были удалены!" << endl;
 }

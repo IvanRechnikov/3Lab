@@ -32,13 +32,7 @@ void main()
 		list.AddHead(mas[i]);
 	}
 
-	list.Revers();
-
-	list.Show();
-
-	list.Delete(3);
-	list.Show();
-	/*while (1)
+	while (1)
 	{
 		system("cls");
 		cout << "\n\t\t\t 1. Добавление записи в начало списка";
@@ -87,11 +81,12 @@ void main()
 			break;
 		case 7: cout << "\n\n\t\tВведите элемент для удаления: ";
 			cin >> S;
+			list.DeleteAllSelected(S, list);
 			system("pause");
 			break;			
 		case 8: exit(1);
 		default: break;
 		}
 	}
-	system("pause");*/
+	system("pause");
 }
