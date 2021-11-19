@@ -6,7 +6,7 @@
   <li>Откройте консоль в данной папке</li>
   <li>Выполните команду: 
     ```shell
-git clone https://github.com/IvanRechnikov/3Lab.git
+$ git clone https://github.com/IvanRechnikov/3Lab.git
 ```</li>
 </ul>
 <h3>Описание лабораторной работы</h3>
