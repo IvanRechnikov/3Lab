@@ -1,9 +1,4 @@
-//TODO:
-// 1)Доделать удаление по заданному числу
-// 2)Оформить отчет
-
 #include <iostream>
-#include <vector>
 #include "functionsForList.h"
 using namespace std;
 
@@ -44,8 +39,8 @@ void main()
 		cout << "\n\t\t\t 5. Очистка списка";
 		cout << "\n\t\t\t 6. Поиск по значению";
 		cout << "\n\t\t\t 7. Удаление заданого числа (всех повторяющихся тоже)";
-		cout << "\n\t\t\t 8. DeleteBack";
-		cout << "\n\t\t\t 9. Delete(index)";
+		cout << "\n\t\t\t 8. Удаление последнего элемента";
+		cout << "\n\t\t\t 9. Удаление по индексу";
 		cout << "\n\t\t\t 10. Выход";
 		cout << "\n\n\n\tВведите номер пункта: ";
 		cin >> number;
@@ -86,16 +81,19 @@ void main()
 		case 7: cout << "\n\n\t\tВведите элемент для удаления: ";
 			cin >> toDelete;
 			list.DeleteAllSelected(toDelete);
+			cout << "Элементы со значением " << toDelete << " были удалены!" << endl;
 			system("pause");
 			break;			
 		case 8: list.DeleteBack();
-			cout << "\n\n\t\tЗапись удалена из начала списка\n";
+			cout << "\n\n\t\tЗапись удалена из конца списка\n";
 			system("pause");
 			break;
-		case 9: cout << "index" << endl;
+		case 9: cout << "\n\n\t\tВведите индекс элемента" << endl;
+			cout << "\n\n\t\t";
+			list.Show();
 			cin >> index;
 			list.Delete(index);
-			cout << "\n\n\t\tЗапись удалена из начала списка\n";
+			cout << "\n\n\t\tЗапись удалена\n";
 			system("pause");
 			break;
 		case 10: exit(1);

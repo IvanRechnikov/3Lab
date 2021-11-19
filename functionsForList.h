@@ -206,15 +206,13 @@ void List<type>::Delete(int index)
 {
 	if (index == 0)
 	{
-		Node<type>* temp = head;
-		head = head->next;
-		delete temp;
+		this->DeleteFront();
+		size++;
 	}
 	else if (index == size - 1)
 	{
-		Node<type>* temp = tail;
-		tail = tail->prev;
-		delete temp;
+		this->DeleteBack();
+		size++;
 	}
 	else
 	{
@@ -299,21 +297,19 @@ template<typename type>
 void List<type>::DeleteAllSelected(type data)
 {
 	Node<type>* p = head;
-	int index = this->GetSize() - 1;
-		while (p)
+	int index = 0;
+	while (p)
+	{
+		if (p->data == data)
 		{
-			if (index == this->GetSize())
-				this->DeleteBack();
-			else if (index == 0)
-			{
-				this->DeleteFront();
-			}
-			else
-			{
-				this->Delete(index);
-			}
-			p = p->next;
-			index--;
+			this->Delete(index);
+			p = head;
+			index = 0;
 		}
-	cout << "Элементы со значением " << data << " были удалены!" << endl;
+		else
+		{
+			p = p->next;
+			index++;
+		}
+	}
 }
