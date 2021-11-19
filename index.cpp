@@ -18,8 +18,10 @@ void main()
 	List<int> list;
 
 	int S; // Число для добавления
+	int toDelete; // Число для удаления
 	int number; // Номер выбора
 	int counter; // кол-во элементов в массиве
+	int index;
 
 	cout << "Введите кол-во элементов в массиве: " << endl;
 	cin >> counter;
@@ -42,7 +44,9 @@ void main()
 		cout << "\n\t\t\t 5. Очистка списка";
 		cout << "\n\t\t\t 6. Поиск по значению";
 		cout << "\n\t\t\t 7. Удаление заданого числа (всех повторяющихся тоже)";
-		cout << "\n\t\t\t 8. Выход";
+		cout << "\n\t\t\t 8. DeleteBack";
+		cout << "\n\t\t\t 9. Delete(index)";
+		cout << "\n\t\t\t 10. Выход";
 		cout << "\n\n\n\tВведите номер пункта: ";
 		cin >> number;
 		switch (number)
@@ -80,11 +84,21 @@ void main()
 			system("pause");
 			break;
 		case 7: cout << "\n\n\t\tВведите элемент для удаления: ";
-			cin >> S;
-			list.DeleteAllSelected(S, list);
+			cin >> toDelete;
+			list.DeleteAllSelected(toDelete);
 			system("pause");
 			break;			
-		case 8: exit(1);
+		case 8: list.DeleteBack();
+			cout << "\n\n\t\tЗапись удалена из начала списка\n";
+			system("pause");
+			break;
+		case 9: cout << "index" << endl;
+			cin >> index;
+			list.Delete(index);
+			cout << "\n\n\t\tЗапись удалена из начала списка\n";
+			system("pause");
+			break;
+		case 10: exit(1);
 		default: break;
 		}
 	}

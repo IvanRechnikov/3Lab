@@ -44,7 +44,7 @@ public:
 
 	void Show(); // Вывод списка на экран (Задание из 7 варианта)
 	
-	void DeleteAllSelected(type data, List<type>& list);
+	void DeleteAllSelected(type data);
 
 	void Clear(); // Очистка списка
 
