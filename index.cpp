@@ -17,12 +17,21 @@ void main()
 
 	List<int> list;
 
-	int S;
-	int number;
-	vector <int> a = { 1, 2, 3, 4, 5, 6, 7, 1, 1, 1 };
-	for (int i = 0; i < a.size(); i++)
+
+
+	int S; // Число для добавления
+	int number; // Номер выбора
+	int counter; // кол-во элементов в массиве
+
+	cout << "Введите кол-во элементов в массиве: " << endl;
+	cin >> counter;
+	int* mas = new int[counter]; // Массив с элементами
+	cout << "Введите элементы массива: ";
+
+	for (int i = 0; i < counter; i++)
 	{
-		list.AddHead(a[i]);
+		cin >> mas[i];
+		list.AddHead(mas[i]);
 	}
 
 	while (1)
