@@ -4,7 +4,7 @@
 <ul>
   <li>Зайдите в локальную папку с решениями</li>
   <li>Откройте консоль в данной папке</li>
-  <li>Выполните команду: git clone https://github.com/IvanRechnikov/3Lab.git</li>
+  <li>Выполните команду: git clone https://github.com/IvanRechnikov/Doubly-linked-list.git</li>
 </ul>
 <h4>Есть и другой вариант!</h4>
 <a href="https://docs.microsoft.com/ru-ru/visualstudio/get-started/tutorial-open-project-from-repo?view=vs-2022#:~:text=%D0%A1%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E%20%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%BA%D0%BD%D0%B0,%D0%B0%20%D0%B7%D0%B0%D1%82%D0%B5%D0%BC%20%D0%BD%D0%B0%D0%B6%D0%BC%D0%B8%D1%82%D0%B5%20%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D1%83%20%D0%9A%D0%BB%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C." target="_blank">С помощью начального окна</a>
